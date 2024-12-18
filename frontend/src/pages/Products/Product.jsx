@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import HeartIcon from "./HeartIcon";
 
 const Product = ({ product }) => {
@@ -25,6 +26,15 @@ const Product = ({ product }) => {
       </div>
     </div>
   );
+};
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Product;
