@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api/": "https://mern-ecommerce-store-1-ycta.onrender.com",
-      "/uploads/": "https://mern-ecommerce-store-1-ycta.onrender.com",
+      "/api/": process.env.VITE_BACKEND_URL,
+      "/uploads/": process.env.VITE_BACKEND_URL,
     },
   },
   build: {
